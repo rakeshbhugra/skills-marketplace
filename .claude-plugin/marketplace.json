@@ -1,0 +1,20 @@
+{
+  "name": "rakesh-skills",
+  "owner": { "name": "Rakesh Bhugra" },
+  "plugins": [
+    {
+      "name": "oled-doc",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/oled-doc"],
+      "description": "Build a self-contained OLED-black, monochrome HTML doc with interactive step-through workflow diagrams."
+    },
+    {
+      "name": "commit-code",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/commit-code"],
+      "description": "Commit changes as several small, grouped commits instead of one big one. Never adds co-author lines."
+    }
+  ]
+}
