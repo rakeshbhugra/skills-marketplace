@@ -23,7 +23,12 @@ Use `.claude/skills/` inside a project instead if you only want it there.
 
 ## Install in Codex
 
-Copy the folder into your Codex skills folder.
+```bash
+codex plugin marketplace add rakeshbhugra/skills-marketplace
+codex plugin add oled-doc@rakesh-skills
+```
+
+Or copy the folder by hand:
 
 ```bash
 git clone https://github.com/rakeshbhugra/skills-marketplace.git

@@ -18,6 +18,14 @@ Skills for Claude Code and Codex. Each skill is a folder under `skills/` with a 
 ## Install in Codex
 
 ```bash
+codex plugin marketplace add rakeshbhugra/skills-marketplace
+codex plugin add oled-doc@rakesh-skills
+codex plugin add commit-code@rakesh-skills
+```
+
+Or copy them by hand:
+
+```bash
 git clone https://github.com/rakeshbhugra/skills-marketplace.git
 mkdir -p ~/.codex/skills
 cp -R skills-marketplace/skills/* ~/.codex/skills/
