@@ -6,6 +6,7 @@ Skills for Claude Code and Codex. Each skill is a folder under `skills/` with a 
 |---|---|
 | [oled-doc](skills/oled-doc) | Builds a black, gray-only HTML doc with clickable step-by-step diagrams. |
 | [commit-code](skills/commit-code) | Splits your changes into small commits grouped by topic. |
+| [code-taste-python](skills/code-taste-python) | Reviews Python backend code against a layered-architecture playbook. |
 
 ## Install everything in Claude Code
 
@@ -13,6 +14,7 @@ Skills for Claude Code and Codex. Each skill is a folder under `skills/` with a 
 /plugin marketplace add rakeshbhugra/skills-marketplace
 /plugin install oled-doc@rakesh-skills
 /plugin install commit-code@rakesh-skills
+/plugin install code-taste-python@rakesh-skills
 ```
 
 ## Install in Codex
@@ -21,6 +23,7 @@ Skills for Claude Code and Codex. Each skill is a folder under `skills/` with a 
 codex plugin marketplace add rakeshbhugra/skills-marketplace
 codex plugin add oled-doc@rakesh-skills
 codex plugin add commit-code@rakesh-skills
+codex plugin add code-taste-python@rakesh-skills
 ```
 
 Or copy them by hand:
