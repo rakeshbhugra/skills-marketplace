@@ -30,6 +30,15 @@
         "./skills/code-taste-python"
       ],
       "description": "Review and structure Python backend code against a layered-architecture playbook (Domain, Repository, Service, Adapter, Unit of Work)."
+    },
+    {
+      "name": "product-demo-video",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/product-demo-video"
+      ],
+      "description": "Make a product demo or explainer video in code: animated HTML/CSS/three.js screens, edge-tts voiceover, captions and music, rendered to a 1080p MP4."
     }
   ]
 }
