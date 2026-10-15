@@ -1,0 +1,20 @@
+{
+ "title": "Acme Notes — how it works",
+ "layout": "canvas",
+ "columns": 3,
+ "loop": false,
+ "voice": "en-US-AvaMultilingualNeural",
+ "logo": "assets/logo.png",
+ "intro": { "headline": "Your team writes everything down.", "sub": "Nobody can find it later." },
+ "outro": { "tagline": "Write it once. <span class=\"grad\">Find it forever.</span>" },
+ "steps": [
+  { "id": "intro", "kind": "intro", "min": 7, "line": "Your team writes everything down. Meeting notes, specs, decisions. Then nobody can find any of it." },
+  { "id": "overview", "kind": "overview", "line": "Acme Notes keeps it all in one place. Here is how it works.", "extra": 1 },
+  { "id": "capture", "kind": "node", "title": "Capture from anywhere", "line": "Notes come in from meetings, email and chat, without copy and paste." },
+  { "id": "organise", "kind": "node", "title": "Organised for you", "line": "Each note is tagged with its project and people, so it lands in the right place.", "extra": 1 },
+  { "id": "ask", "kind": "node", "title": "Ask, don't search", "line": "Ask a question in plain words, and get the answer with a link to the note it came from.", "extra": 1.5 },
+  { "id": "share", "kind": "node", "title": "Share the decision", "line": "Send the decision to the people who need it, in the tools they already use." },
+  { "id": "stack", "kind": "scene", "line": "One workspace, with your data, search and integrations underneath.", "extra": 1 },
+  { "id": "outro", "kind": "outro", "line": "Acme Notes. Write it once. Find it forever." }
+ ]
+}

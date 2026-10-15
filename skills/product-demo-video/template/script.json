@@ -1,0 +1,16 @@
+{
+ "title": "Starter",
+ "layout": "canvas",
+ "columns": 3,
+ "loop": false,
+ "voice": "en-US-AvaMultilingualNeural",
+ "logo": "assets/logo.png",
+ "intro": { "headline": "Your headline here", "sub": "a short second line" },
+ "outro": { "tagline": "Your tagline, <span class=\"grad\">in colour.</span>" },
+ "steps": [
+  { "id": "intro", "kind": "intro", "min": 7, "line": "One sentence that names the problem." },
+  { "id": "overview", "kind": "overview", "line": "Here is how it works, end to end." },
+  { "id": "hello", "kind": "node", "title": "First step", "line": "Each step is one moment in the story, with its own screen." },
+  { "id": "outro", "kind": "outro", "line": "Product name. Your tagline." }
+ ]
+}

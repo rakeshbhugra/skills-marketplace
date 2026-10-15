@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Product Video</title>
+<link rel="stylesheet" href="theme.css">
+<style>
+  #bg { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+  #world { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+  #paths { position: absolute; overflow: visible; }
+  .node { position: absolute; width: 1600px; height: 900px; }
+  .node .frame { position: absolute; inset: 0; border-radius: 30px; overflow: hidden; background: var(--chrome-2); border: 2px solid var(--frame-border, rgba(255,255,255,.10)); box-shadow: var(--frame-shadow, 0 60px 160px rgba(0,0,0,.65)); }
+  .node .glow { position: absolute; inset: -3px; border-radius: 32px; border: 3px solid var(--accent-2); box-shadow: 0 0 60px color-mix(in srgb, var(--accent-2) 55%, transparent), inset 0 0 40px color-mix(in srgb, var(--accent-2) 15%, transparent); pointer-events: none; }
+  .node .label { position: absolute; left: 0; bottom: 100%; margin-bottom: 34px; display: flex; align-items: baseline; gap: 28px; color: var(--label-ink, #fff); white-space: nowrap; }
+  .node .label .n { font-size: 84px; font-weight: 800; color: var(--accent-2); letter-spacing: -2px; }
+  .node .label .t { font-size: 92px; font-weight: 800; letter-spacing: -3px; }
+  .scene { position: absolute; inset: 0; pointer-events: none; }
+  #hud { position: absolute; left: 40px; top: 32px; display: flex; align-items: center; gap: 16px; color: var(--hud-ink, #fff); font-weight: 700; font-size: 20px; padding: 12px 20px; border-radius: 14px; background: var(--hud-bg, rgba(12, 6, 14, .78)); backdrop-filter: blur(8px); box-shadow: 0 10px 30px rgba(0,0,0,.35); }
+  #hud .num { color: var(--accent-2); font-variant-numeric: tabular-nums; }
+  #hud .bar { width: 220px; height: 4px; border-radius: 4px; background: rgba(255,255,255,.15); overflow: hidden; }
+  #hud .bar b { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--glow-a), var(--glow-b)); }
+  #cap { position: absolute; left: 50%; bottom: 46px; transform: translateX(-50%); width: max-content; max-width: 1680px; text-align: center; color: var(--cap-ink, #fff); font-size: 29px; font-weight: 600; line-height: 1.35; padding: 12px 26px; border-radius: 14px; background: var(--cap-bg, rgba(12, 6, 14, .72)); box-shadow: var(--cap-shadow, none); backdrop-filter: blur(8px); }
+  #vignette { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at center, transparent 55%, var(--vignette, rgba(0,0,0,.55)) 100%); }
+  #bgfx { position: absolute; inset: 0; background-color: var(--night); }
+  #bgfx.bg-particles { display: none; }
+  #bgfx.bg-grid { background-image: radial-gradient(circle, var(--grid-dot, rgba(0,0,0,.16)) 1.4px, transparent 1.7px), linear-gradient(var(--grid-line, rgba(0,0,0,.045)) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line, rgba(0,0,0,.045)) 1px, transparent 1px); }
+  #bgfx.bg-paper { background-image: radial-gradient(ellipse at 50% 40%, transparent 40%, var(--paper-edge, rgba(120,90,60,.10)) 100%); }
+  #bgfx.bg-gradient { background-image: radial-gradient(ellipse at 20% 30%, color-mix(in srgb, var(--glow-a) 22%, transparent), transparent 55%), radial-gradient(ellipse at 80% 70%, color-mix(in srgb, var(--glow-b) 22%, transparent), transparent 55%); background-size: 160% 160%; }
+  #flash { position: absolute; inset: 0; background: var(--flash, #fff); opacity: 0; pointer-events: none; z-index: 8; }
+  #pbar { position: absolute; left: 0; right: 0; top: 0; height: 5px; background: var(--pbar-track, rgba(0,0,0,.06)); opacity: 0; z-index: 7; }
+  #pbar b { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius: 0 3px 3px 0; }
+  #logobug { position: absolute; right: 44px; top: 34px; height: 34px; opacity: 0; z-index: 7; pointer-events: none; }
+  .big { font-size: 96px; font-weight: 800; letter-spacing: -3px; color: #fff; line-height: 1.04; }
+  .grad { background: linear-gradient(90deg, var(--glow-a), var(--glow-b)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+</style>
+</head>
+<body>
+<canvas id="bg" width="1920" height="1080"></canvas>
+<div id="world"><svg id="paths"></svg></div>
+<div id="scenes"></div>
+<div id="vignette"></div>
+<div id="hud"><span class="num"></span><span class="bar"><b></b></span><span class="name"></span></div>
+<div id="cap"></div>
+<script type="importmap">{ "imports": { "three": "./node_modules/three/build/three.module.js" } }</script>
+<script type="module" src="engine.js"></script>
+</body>
+</html>
